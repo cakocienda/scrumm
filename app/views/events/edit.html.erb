@@ -1,0 +1,42 @@
+
+<h1>Edit Article</h1>
+ 
+<%= form_with(model: @event, local: true) do |form| %>
+ 
+
+ 
+  <p>
+    <%= form.label :num %><br>
+    <%= form.text_field :num %>
+  </p>
+ 
+  <p>
+    <%= form.label :work %><br>
+    <%= form.text_area :work %>
+  </p>
+    <p>
+    <%= form.label :epstring %><br>
+    <%= form.text_field :epstring %>
+  </p>
+ 
+  <p>
+    <%= form.label :epint %><br>
+    <%= form.text_area :epint %>
+  </p>
+    <p>
+    <%= form.label :ep2string %><br>
+    <%= form.text_field :ep2string %>
+  </p>
+ 
+  <p>
+    <%= form.label :ep2int %><br>
+    <%= form.text_area :ep2int %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num: 1
+  extrap: MyString
+  string: MyString
+  extrap: MyString
+  integer: MyString
+
+two:
+  num: 1
+  extrap: MyString
+  string: MyString
+  extrap: MyString
+  integer: MyString

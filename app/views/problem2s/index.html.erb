@@ -1,0 +1,25 @@
+
+<h1>Listing Problems</h1>
+<h3>All problem cards that can be drawn are listed here, this overall table updates whenever a new problem card is drawn.</h3>
+<h3>Problem cards can only be drawn once per game.</h3>
+<table>
+  <tr>
+    <th>Num</th>
+    <th>Description</th>
+	<th>Problem Card Drawn?<th>
+	<th>Story Problem Applies To<th>
+    <th></th>
+  </tr>
+ 
+  <% @problem2s.each do |problem| %>
+    <tr>
+      <td><%= problem.num %></td>
+      <td><%= problem.epstring %></td>
+	  <td><%= problem.integer %></td>
+	  <td><%= problem.epint %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Current Stories', events_path(@event) %>
+<%= link_to 'Current Solutions', solution2s_path(@solution) %>
+<%= link_to 'Back', articles_path %>

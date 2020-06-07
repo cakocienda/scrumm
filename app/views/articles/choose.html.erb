@@ -1,0 +1,29 @@
+<h2>Comments</h2>
+<% @article.commentts.each do |commentt| %>
+  <p>
+    <strong>Num:</strong>
+    <%= commentt.body %>
+  </p>
+ 
+  <p>
+    <strong>Title:</strong>
+    <%= commentt.commenter %>
+  </p>
+<% end %>
+ 
+<h2>Add a comment:</h2>
+<%= form_with(model: [ @article, @article.commentts.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Edit', edit_article_path(@article) %> |

@@ -1,0 +1,27 @@
+
+<h1>Listing Events</h1>
+ 
+<p>
+  <strong>Turn Number:</strong>
+  <%= @events.find(1).epint %>
+</p>
+ 
+<table>
+  <tr>
+    <th>Num</th>
+    <th>Work</th>
+    <th></th>
+  </tr>
+ 
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.num %></td>
+      <td><%= event.work %></td>
+      <td><%= event.work >= 1 ? (link_to 'Roll for this problem', event_path(event)) : 'This story is complete!' %></td>
+	  <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Current Problems', problem2s_path(@problem) %>
+<%= link_to 'Current Solutions', solution2s_path(@solution) %>
+<%= link_to 'Back', articles_path %>

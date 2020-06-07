@@ -1,0 +1,13 @@
+
+<h1>Welcome to the Sprint Game!</h1>
+<br></br>
+
+<p>
+  <strong>Number of players playing:</strong>
+  <%= @article.work %>
+</p>
+
+<%= link_to 'Current Stories', events_path(@event) %>
+<%= link_to 'Current Problems', problem2s_path(@problem) %>
+<%= link_to 'Current Solutions', solution2s_path(@solution) %>
+

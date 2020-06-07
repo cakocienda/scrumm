@@ -1,0 +1,22 @@
+
+<h1>Listing Solutions</h1>
+ 
+<table>
+  <tr>
+    <th>Num</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+ 
+  <% @solution2s.each do |problem| %>
+    <tr>
+      <td><%= problem.num %></td>
+      <td><%= problem.epstring %></td>
+	  <td><%= problem.epint != 0 ? (link_to 'Apply', edit_solution2_path(problem)) : 'Apply' %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Current Stories', events_path(@event) %>
+<%= link_to 'Current Problems', problem2s_path(@problem) %>
+
+<%= link_to 'Back', articles_path %>

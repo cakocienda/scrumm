@@ -1,0 +1,29 @@
+
+<h1>
+  <strong>Dice Rolled! Result:</strong>
+  <%= @event.ep2int %>
+</h1>
+
+<p>
+  <strong>Story Number:</strong>
+  <%= @event.num %>
+</p>
+ 
+<p>
+  <strong>Work:</strong>
+  <%= @event.work %>
+</p>
+
+<p>
+  <strong>Turn Number:</strong>
+  <%= @event.epint %>
+</p>
+
+
+<p>
+  <strong>Card Description:</strong>
+  <%= @event.ep2string %>
+</p>
+
+
+<%= link_to 'Back', events_path %>

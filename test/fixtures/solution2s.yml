@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num: 1
+  epstring: MyString
+  epint: 1
+  ep2string: MyString
+  ep2int: 1
+
+two:
+  num: 1
+  epstring: MyString
+  epint: 1
+  ep2string: MyString
+  ep2int: 1

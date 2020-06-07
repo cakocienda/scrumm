@@ -1,0 +1,19 @@
+<h1>New Article</h1>
+
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+  <p>
+    <%= form.label :num %><br>
+    <%= form.text_field :num %>
+  </p>
+ 
+  <p>
+    <%= form.label :"How many players are playing?" %><br>
+    <%= form.text_area :work %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', articles_path %>
